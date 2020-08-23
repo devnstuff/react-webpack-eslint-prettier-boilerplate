@@ -2,7 +2,7 @@
   "name": "webpack-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "App.jsx",
   "scripts": {
     "start": "webpack-dev-server --open --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "html-webpack-template": "^6.2.0",
     "mini-css-extract-plugin": "^0.9.0",

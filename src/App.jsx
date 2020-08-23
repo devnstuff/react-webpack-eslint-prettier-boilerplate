@@ -1,18 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import { Wrapper, Test } from './components';
 
-export default function App({ message }) {
-  return (
-    <>
-      {message}
-      <p>dasd</p>
-    </>
-  );
-}
-App.propTypes = {
-  message: PropTypes.string,
-};
+import './assets/style/index.scss';
 
-App.defaultProps = {
-  message: 'laba diena su vistiena',
-};
+const App = () => (
+  <Wrapper>
+    <Test />
+  </Wrapper>
+);
+
+ReactDOM.render(<App />, document.querySelector('#app'));
