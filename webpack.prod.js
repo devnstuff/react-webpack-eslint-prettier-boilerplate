@@ -10,7 +10,7 @@ const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',
-  entry: './src/App.jsx',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contentHash].bundle.js',

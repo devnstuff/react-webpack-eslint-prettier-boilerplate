@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Wrapper, Test } from './components';
-
-import './assets/style/index.scss';
+import Posts from './components/posts/Posts';
 
 const App = () => (
-  <Wrapper>
-    <Test />
-  </Wrapper>
+  <>
+    <Posts />
+  </>
 );
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+export default App;
