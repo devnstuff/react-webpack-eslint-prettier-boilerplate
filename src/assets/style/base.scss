@@ -2,12 +2,21 @@
 
 :root {
   --text: #000;
-  --background: #fff;
+  --background: #ffffff;
+  --primary: #7f00e0;
+  --select: #ffbd03;
+  --select-color: rgb(254, 254, 254);
 }
 
 * {
   margin: 0;
   padding: 0;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--select);
+  color: var(--select-color);
 }
 
 body {
@@ -20,4 +29,8 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: var(--text);
+
+  .primary {
+    color: var(--primary);
+  }
 }
