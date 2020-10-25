@@ -4,8 +4,9 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 import { ApolloProvider } from 'react-apollo';
+import { ThemeProvider } from './shared/ThemeContext';
 
-import App from './App';
+import AppLayout from './components/AppLayout/AppLayout';
 import './assets/style/base.scss';
 
 const link = new HttpLink({
@@ -13,7 +14,6 @@ const link = new HttpLink({
 });
 
 const cache = new InMemoryCache();
-
 const client = new ApolloClient({
   link,
   cache,
@@ -51,7 +51,9 @@ const client = new ApolloClient({
 
 render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider>
+      <AppLayout />
+    </ThemeProvider>
   </ApolloProvider>,
   document.querySelector('#app'),
 );
